@@ -7,7 +7,7 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
-ul,li,figure,div,h1,h2,h3{
+ul,li,figure,div,h1,h2,h3,section{
     margin: 0px;
     padding: 0px;
     text-decoration: none;
@@ -15,55 +15,80 @@ ul,li,figure,div,h1,h2,h3{
 
 /**/
 .headline{
-    color: #f0563d;
+    color: #eefff1;
     font-size: 2em;
+    text-shadow: 0px 2px 0px #eefff1;
+    -webkit-text-stroke: 1px #212121c0;
+    text-shadow: 0px 4px 0px #7ac98d;
     margin: 1em auto;
     text-transform: uppercase;
     font-weight: 900;
     text-align: center;
 }
 
+.main-section{
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
 .task-creator{
     display: flex;
-    margin: 2em 1em;
+    padding: 1em .5em;
     justify-content: center;
+    max-height: 100%;
+    height: 100vh;
+    border-right: 2px solid #7ac98c86;
+    border-top: 2px solid #7ac98c86;
 }
 
 .task-creator .fields{
     display: flex;
     flex-direction: column;
-    margin: auto 0;
+    width: 100%;
+    flex: 1;
+    margin: 0;
+    padding: 0 .5em;
 }
-#task-creator_button{
+
+.control{
+    display: flex;
+    flex-direction: column;
+
+}
+.control button{
     background: #c3e88d;
     padding: 1em;
-    margin: auto .5em;
+    margin: .5em;
+    width: 55px;
+    max-height: 45px;
     border: 1px solid #c3e88d;
+    -webkit-text-stroke: 1px #212121c0;
     box-shadow: 0px 4px 0px 0px #7ac98d;
     border-radius: 4px;
-    font-weight: 800;
-    color: #f0563d;
+    font-weight: 900;
+    color: #eefff1;
     transition: 0.2s;
 }
 
-#task-creator_button i{
-    font-size: 20px;
+.control button i{
+    font-size: 24px;
     transition: 0.2s;
 }
 
-#task-creator_button:hover{
+.control button:hover{
     box-shadow: 0px 1px 0px 0px #7ac98d;
 }
 
-#task-creator_button:hover i{
+.control button:hover i{
     text-shadow: 0px 2px 1px rgba(0,0,0,0.25);
 }
 .task-creator input{
     padding: 1em;
+    max-height: 45px;
     margin: .5em 0;
-    max-width: 600px;
+    max-width: 100%;
     text-transform: uppercase;
-    width: 100vw;
+    width: 100;
     border-radius: 4px;
     background-color: #eefff1;
     border: 1px solid #eefff1;
@@ -139,3 +164,17 @@ li{
     text-shadow: 0px 2px 1px rgba(0,0,0,0.25);
 }
 
+
+@media(max-width:1024px){
+    .main-section{
+        grid-template-columns: auto;
+    }
+
+    .task-creator{
+        max-height: 100%;
+        height: unset;
+        border:none;
+        padding: .5em;
+        margin: 1em 0;
+    }
+}

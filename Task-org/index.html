@@ -17,16 +17,23 @@
 </head>
 
 <body>
-    <h1 class="headline">Tasks</h1>
-    <div class="task-creator">
-        <figure class="fields">
-            <input type="text" id="task-creator_name" placeholder="Task name...">
-            <input type="text" id="task-creator_desc1" placeholder="Description">
-        </figure>
-        <button id="task-creator_button"><i class="fas fa-check"></i></button>
-    </div>
-    <div class="task-container grid-container">
-    </div>
+    <section class="row main-section">
+        <div class="task-creator">
+            <figure class="fields">
+                <input type="text" id="task-creator_name" placeholder="Task name...">
+                <input type="text" id="task-creator_desc1" placeholder="Description">
+            </figure>
+            <div class="control">
+                <button id="task-creator_button"><i class="fas fa-check"></i></button>
+                <button id="task-extra_button"><i class="fas fa-plus"></i></button>
+            </div>
+        </div>
+        <div>
+            <h1 class="headline">Tasks</h1>
+            <div class="task-container grid-container">
+            </div>
+        </div>
+    </section>
 
 </body>
 <script src="main.js"></script>
